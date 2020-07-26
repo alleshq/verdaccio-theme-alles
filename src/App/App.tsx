@@ -35,15 +35,6 @@ const StyledBoxContent = styled(Box)<{ theme?: Theme }>(({ theme }) => ({
 /* eslint-disable react-hooks/exhaustive-deps */
 const App: React.FC = () => {
   const [user, setUser] = useState<undefined | { username: string }>();
-  /**
-   * Logout user
-   * Required by: <Header />
-   */
-  const logout = () => {
-    storage.removeItem('username');
-    storage.removeItem('token');
-    setUser(undefined);
-  };
 
   const checkUserAlreadyLoggedIn = () => {
     // checks for token validity
@@ -51,7 +42,11 @@ const App: React.FC = () => {
     const username = storage.getItem('username');
 
     if (isTokenExpire(token) || isNil(username)) {
-      logout();
+      if (location.pathname === "/account/auth") {
+        alert("This is intended to be used for Alles' Verdaccio instance");
+      } else {
+        location.href = "/account/auth";
+      }
       return;
     }
 
