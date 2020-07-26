@@ -21,7 +21,6 @@ interface Props {
 const HeaderRight: React.FC<Props> = ({
   withoutSearch = false,
   username,
-  onToggleLogin,
   onLogout,
   onToggleMobileNav,
   onOpenRegistryInfoDialog,
@@ -59,7 +58,7 @@ const HeaderRight: React.FC<Props> = ({
    */
   const handleToggleLogin = () => {
     setAnchorEl(null);
-    onToggleLogin();
+    location.href = "/account/auth";
   };
 
   const handleToggleDarkLightMode = () => {
