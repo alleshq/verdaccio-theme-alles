@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useContext, MouseEvent } from 'react';
+import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Button from 'verdaccio-ui/components/Button';
 import ThemeContext from 'verdaccio-ui/design-tokens/ThemeContext';
 
-import HeaderMenu from './HeaderMenu';
 import HeaderToolTip from './HeaderToolTip';
 import LanguageSwitch from './LanguageSwitch';
 import { RightSide } from './styles';
@@ -21,13 +20,10 @@ interface Props {
 const HeaderRight: React.FC<Props> = ({
   withoutSearch = false,
   username,
-  onLogout,
   onToggleMobileNav,
   onOpenRegistryInfoDialog,
 }) => {
   const themeContext = useContext(ThemeContext);
-  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const { t } = useTranslation();
 
@@ -35,31 +31,9 @@ const HeaderRight: React.FC<Props> = ({
     throw Error(t('theme-context-not-correct-used'));
   }
 
-  useEffect(() => {
-    setIsMenuOpen(Boolean(anchorEl));
-  }, [anchorEl]);
-
-  /**
-   * opens popover menu for logged in user.
-   */
-  const handleLoggedInMenu = (event: MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  /**
-   * closes popover menu for logged in user
-   */
-  const handleLoggedInMenuClose = () => {
-    setAnchorEl(null);
-  };
-
   /**
    * close/open popover menu for logged in users.
    */
-  const handleToggleLogin = () => {
-    setAnchorEl(null);
-    location.href = "/account/auth";
-  };
 
   const handleToggleDarkLightMode = () => {
     setTimeout(() => {
@@ -82,16 +56,11 @@ const HeaderRight: React.FC<Props> = ({
       />
 
       {username ? (
-        <HeaderMenu
-          anchorEl={anchorEl}
-          isMenuOpen={isMenuOpen}
-          onLoggedInMenu={handleLoggedInMenu}
-          onLoggedInMenuClose={handleLoggedInMenuClose}
-          onLogout={onLogout}
-          username={username}
-        />
+        <Button color="inherit" onClick={() => location.href = "/account"}>
+          My Account
+        </Button>
       ) : (
-        <Button color="inherit" data-testid="header--button-login" onClick={handleToggleLogin}>
+        <Button color="inherit" data-testid="header--button-login" onClick={() => location.href = "/account/auth"}>
           {t('button.login')}
         </Button>
       )}
