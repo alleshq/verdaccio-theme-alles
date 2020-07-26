@@ -5,7 +5,6 @@ import Button from 'verdaccio-ui/components/Button';
 import ThemeContext from 'verdaccio-ui/design-tokens/ThemeContext';
 
 import HeaderToolTip from './HeaderToolTip';
-import LanguageSwitch from './LanguageSwitch';
 import { RightSide } from './styles';
 
 interface Props {
@@ -46,7 +45,6 @@ const HeaderRight: React.FC<Props> = ({
       {!withoutSearch && (
         <HeaderToolTip onClick={onToggleMobileNav} title={t('search.packages')} tooltipIconType={'search'} />
       )}
-      <LanguageSwitch />
       <HeaderToolTip title={t('header.documentation')} tooltipIconType={'help'} />
       <HeaderToolTip onClick={onOpenRegistryInfoDialog} title={t('header.registry-info')} tooltipIconType={'info'} />
       <HeaderToolTip
