@@ -192,12 +192,6 @@
     "node": ">= 8",
     "npm": ">=5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --relative",
-      "commit-msg": "commitlint -e $GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "*.{js,tsx,ts}": [
       "eslint . --ext .js,.ts,.tsx",

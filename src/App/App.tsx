@@ -14,7 +14,6 @@ import storage from 'verdaccio-ui/utils/storage';
 
 import AppContextProvider from './AppContextProvider';
 import AppRoute, { history } from './AppRoute';
-import Footer from './Footer';
 import Header from './Header';
 
 import '../../i18n/config';
@@ -77,7 +76,6 @@ const App: React.FC = () => {
               </StyledBoxContent>
             </AppContextProvider>
           </Router>
-          <Footer />
         </>
       </StyledBox>
     </Suspense>
