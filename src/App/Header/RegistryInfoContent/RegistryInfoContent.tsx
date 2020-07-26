@@ -4,7 +4,7 @@ import CopyToClipBoard from 'verdaccio-ui/components/CopyToClipBoard';
 import { default as Typography } from 'verdaccio-ui/components/Heading';
 import Tab from 'verdaccio-ui/components/Tab';
 import Tabs from 'verdaccio-ui/components/Tabs';
-import { getCLISetRegistry, getCLIChangePassword, getCLISetConfigRegistry } from 'verdaccio-ui/utils/cli-utils';
+import { getCLISetConfigRegistry } from 'verdaccio-ui/utils/cli-utils';
 import { NODE_MANAGER } from 'verdaccio-ui/utils/constants';
 
 import { CommandContainer } from './styles';
@@ -21,8 +21,6 @@ const RegistryInfoContent: React.FC<Props> = props => {
     return (
       <>
         <CopyToClipBoard text={getCLISetConfigRegistry(`${NODE_MANAGER.npm} set`, scope, registryUrl)} />
-        <CopyToClipBoard text={getCLISetRegistry(`${NODE_MANAGER.npm} adduser`, registryUrl)} />
-        <CopyToClipBoard text={getCLIChangePassword(NODE_MANAGER.npm, registryUrl)} />
       </>
     );
   };
@@ -31,8 +29,6 @@ const RegistryInfoContent: React.FC<Props> = props => {
     return (
       <>
         <CopyToClipBoard text={getCLISetConfigRegistry(`${NODE_MANAGER.pnpm} set`, scope, registryUrl)} />
-        <CopyToClipBoard text={getCLISetRegistry(`${NODE_MANAGER.pnpm} adduser`, registryUrl)} />
-        <CopyToClipBoard text={getCLIChangePassword(NODE_MANAGER.pnpm, registryUrl)} />
       </>
     );
   };
