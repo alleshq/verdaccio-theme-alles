@@ -29,7 +29,7 @@ const HeaderToolTipIcon = forwardRef<HeaderToolTipIconRef, Props>(function Heade
         <StyledLink
           data-testid={'header--tooltip-documentation'}
           external={true}
-          to={'https://verdaccio.org/docs/en/installation'}>
+          to={'https://alles.link/anoreg-help'}>
           <IconButton color={'inherit'}>
             <Help />
           </IconButton>

@@ -630,7 +630,7 @@ exports[`<App /> should display the Header component  1`] = `
         <a
           class="emotion-30 emotion-31"
           data-testid="header--tooltip-documentation"
-          href="https://verdaccio.org/docs/en/installation"
+          href="https://alles.link/anoreg-help"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -1495,7 +1495,7 @@ exports[`<App /> should display the Loading component at the beginning  1`] = `
         <a
           class="emotion-30 emotion-31"
           data-testid="header--tooltip-documentation"
-          href="https://verdaccio.org/docs/en/installation"
+          href="https://alles.link/anoreg-help"
           rel="noopener noreferrer"
           target="_blank"
         >

@@ -38,7 +38,7 @@ const Help: React.FC = () => {
         <Text variant="body2">{t('help.third-step')}</Text>
       </CardContent>
       <CardActions>
-        <Button color="primary" href="https://verdaccio.org/docs/en/installation" size="small">
+        <Button color="primary" href="https://alles.link/anoreg-help" size="small">
           {t('button.learn-more')}
         </Button>
       </CardActions>

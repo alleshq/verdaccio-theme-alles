@@ -93,7 +93,7 @@ describe('<Header /> component with logged in state', () => {
     );
 
     const documentationBtn = getByTestId('header--tooltip-documentation');
-    expect(documentationBtn.getAttribute('href')).toBe('https://verdaccio.org/docs/en/installation');
+    expect(documentationBtn.getAttribute('href')).toBe('https://alles.link/anoreg-help');
   });
 
   test('should open the registrationInfo modal when clicking on the info icon', async () => {

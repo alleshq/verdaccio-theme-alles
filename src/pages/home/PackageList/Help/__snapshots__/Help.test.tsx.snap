@@ -144,7 +144,7 @@ exports[`<Help /> component should load the component in default state 1`] = `
     <a
       aria-disabled="false"
       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
-      href="https://verdaccio.org/docs/en/installation"
+      href="https://alles.link/anoreg-help"
       tabindex="0"
     >
       <span
