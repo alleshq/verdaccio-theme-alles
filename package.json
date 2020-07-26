@@ -1,16 +1,11 @@
 {
-  "name": "@verdaccio/ui-theme",
-  "version": "1.12.1",
-  "description": "Verdaccio User Interface",
-  "author": {
-    "name": "Verdaccio Core Team",
-    "email": "verdaccio.npm@gmail.com"
-  },
+  "name": "verdaccio-theme-alles",
+  "version": "0.0.1",
+  "description": "Verdaccio UI for Alles Node Registry",
   "repository": {
     "type": "git",
-    "url": "git://github.com/verdaccio/ui"
+    "url": "https://github.com/alleshq/verdaccio-theme-alles"
   },
-  "homepage": "https://verdaccio.org",
   "main": "index.js",
   "devDependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.8.0",
@@ -207,10 +202,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/verdaccio",
-    "logo": "https://opencollective.com/verdaccio/logo.txt"
   }
 }
