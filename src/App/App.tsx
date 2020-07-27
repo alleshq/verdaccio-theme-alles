@@ -42,9 +42,8 @@ const App: React.FC = () => {
     const username = storage.getItem('username');
 
     if (isTokenExpire(token) || isNil(username)) {
-      if (location.pathname === "/account/auth") {
-        alert("This is intended to be used for Alles' Verdaccio instance");
-      } else {
+      if (location.pathname !== "/account/auth") {
+        localStorage.setItem("redirect", location.href);
         location.href = "/account/auth";
       }
       return;
