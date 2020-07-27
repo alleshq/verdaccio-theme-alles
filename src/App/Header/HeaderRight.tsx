@@ -60,7 +60,7 @@ const HeaderRight: React.FC<Props> = ({
       ) : (
         <Button color="inherit" data-testid="header--button-login" onClick={() => {
           localStorage.setItem("redirect", location.href);
-          location.href = "/account/auth";
+          setTimeout(() => location.href = "/account/auth", 1000);
         }}>
           {t('button.login')}
         </Button>

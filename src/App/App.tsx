@@ -44,7 +44,7 @@ const App: React.FC = () => {
     if (isTokenExpire(token) || isNil(username)) {
       if (location.pathname !== "/account/auth") {
         localStorage.setItem("redirect", location.href);
-        location.href = "/account/auth";
+        setTimeout(() => location.href = "/account/auth", 1000);
       }
       return;
     }
